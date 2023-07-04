@@ -99,6 +99,24 @@ class Servo:
 # ============== Fim Classe Servo ==============
 
 
-# ==== Basic Test ====
-    #todo
+# ==== Basic Swipe Test ====
+if (__name__ == "__main__"):
+    from time import sleep_ms as delay
+    
+    servo = Servo()
+    servo.attach(2)
+
+    while True:
+        for angulo in range(90, 181):
+            servo.write(angulo)
+            delay(20)
+        
+        for angulo in range(180, -1, -1):
+            servo.write(angulo)
+            delay(20)
+        
+        for angulo in range(0, 90):
+            servo.write(angulo)
+            delay(20)
+            
 # ==== Basic Test ====
